@@ -35,7 +35,7 @@ inputs:
     default: ""
 runs:
   using: "docker"
-  image: "docker://ghcr.io/desklabs-creative/vipo-amplify-cli-action:0.3.3"
+  image: "docker://docker.io/henskjold73/vipo:latest"
   args:
     - ${{ inputs.project_dir }}
     - ${{ inputs.source_dir }}

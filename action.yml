@@ -1,4 +1,4 @@
-name: "amplify-cli-action"
+name: "vipo-amplify-cli-action"
 description: "This action builds and deploys your AWS Amplify project"
 inputs:
   project_dir:
@@ -35,7 +35,7 @@ inputs:
     default: ""
 runs:
   using: "docker"
-  image: "docker://ghcr.io/desklabs-creative/amplify-cli-action/amplify-cli-action:0.3.0"
+  image: "docker://ghcr.io/desklabs-creative/amplify-cli-action/vipo-amplify-cli-action:0.3.0"
   args:
     - ${{ inputs.project_dir }}
     - ${{ inputs.source_dir }}

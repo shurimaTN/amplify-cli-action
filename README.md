@@ -1,7 +1,7 @@
-# amplify-cli-action
+# vipo-amplify-cli-action
 
 [![RELEASE](https://img.shields.io/github/v/release/desklabs-creative/amplify-cli-action?include_prereleases)](https://github.com/desklabs-creative/amplify-cli-action/releases)
-[![View Action](https://img.shields.io/badge/view-action-blue.svg?logo=github&color=orange)](https://github.com/marketplace/actions/amplify-cli-action)
+[![View Action](https://img.shields.io/badge/view-action-blue.svg?logo=github&color=orange)](https://github.com/marketplace/actions/vipo-amplify-cli-action)
 [![LICENSE](https://img.shields.io/github/license/desklabs-creative/amplify-cli-action)](https://github.com/desklabs-creative/amplify-cli-action/blob/master/LICENSE)
 [![ISSUES](https://img.shields.io/github/issues/desklabs-creative/amplify-cli-action)](https://github.com/desklabs-creative/amplify-cli-action/issues)
 
@@ -11,7 +11,7 @@ No longer maintained. Feel free to send the PR to **README.md** and link folks t
 
 ## Getting Started
 
-You can include the action in your workflow as `actions/amplify-cli-action@0.3.0`. Example (configuring amplify, building and deploying):
+You can include the action in your workflow as `actions/vipo-amplify-cli-action@0.3.0`. Example (configuring amplify, building and deploying):
 
 ```yaml
 name: "Amplify Deploy"
@@ -19,7 +19,7 @@ on: [push]
 
 jobs:
   test:
-    name: test amplify-cli-action
+    name: test vipo-amplify-cli-action
     runs-on: ubuntu-latest
 
     strategy:
@@ -240,7 +240,7 @@ on: [pull_request]
 
 jobs:
   test:
-    name: test amplify-cli-action
+    name: test vipo-amplify-cli-action
     runs-on: ubuntu-latest
 
     strategy:
@@ -303,10 +303,10 @@ How to roll out a new image
 ```bash
 VERSION=0.3.0
 
-docker build -t amplify-cli-action:$VERSION .
+docker build -t vipo-amplify-cli-action:$VERSION .
 
-docker tag amplify-cli-action:$VERSION ghcr.io/desklabs-creative/amplify-cli-action/amplify-cli-action:$VERSION
+docker tag vipo-amplify-cli-action:$VERSION ghcr.io/desklabs-creative/amplify-cli-action/vipo-amplify-cli-action:$VERSION
 
-docker push ghcr.io/desklabs-creative/amplify-cli-action/amplify-cli-action:$VERSION
+docker push ghcr.io/desklabs-creative/amplify-cli-action/vipo-amplify-cli-action:$VERSION
 
 ```

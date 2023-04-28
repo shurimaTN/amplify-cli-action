@@ -35,7 +35,7 @@ inputs:
     default: ""
 runs:
   using: "docker"
-  image: "docker://docker.io/henskjold73/vipo:latest"
+  image: "docker://docker.io/henskjold73/vipoatest:latest"
   args:
     - ${{ inputs.project_dir }}
     - ${{ inputs.source_dir }}

@@ -1,41 +1,41 @@
-name: 'amplify-cli-action'
-description: 'This action builds and deploys your AWS Amplify project'
+name: "amplify-cli-action"
+description: "This action builds and deploys your AWS Amplify project"
 inputs:
-  project_dir: 
-    description: 'the root project directory: use it if you amplify project is not this repo root directory'
+  project_dir:
+    description: "the root project directory: use it if you amplify project is not this repo root directory"
     required: false
-  source_dir: 
-    description: 'front-end source location where aws_exports.js will be generated'
+  source_dir:
+    description: "front-end source location where aws_exports.js will be generated"
     required: false
-    default: 'src'
+    default: "src"
   distribution_dir:
-    description: 'front-end artifacts deployment directory that gets uploaded to S3 during amplify publish'
+    description: "front-end artifacts deployment directory that gets uploaded to S3 during amplify publish"
     required: false
-    default: 'dist'
-  build_command: 
-    description: 'a build command to run with amplify publish (to build front-end deployment artifacts)'
+    default: "dist"
+  build_command:
+    description: "a build command to run with amplify publish (to build front-end deployment artifacts)"
     required: false
-    default: 'npm run build'
+    default: "npm run build"
   amplify_env:
-    description: 'amplify environment to use'
+    description: "amplify environment to use"
     required: true
   amplify_command:
-    description: 'amplify command: SUPPORTED: [configure, push, publish, status, add_env, delete_env]'
+    description: "amplify command: SUPPORTED: [configure, push, publish, status, add_env, delete_env]"
     required: true
   amplify_cli_version:
-    description: 'version of amplify/cli used'
+    description: "version of amplify/cli used"
     required: false
   delete_lock:
-    description: 'deletion protection: explicitly set this to false if you want amplify delete to work'
+    description: "deletion protection: explicitly set this to false if you want amplify delete to work"
     required: false
     default: true
   amplify_arguments:
-    description: 'additional arguments to pass to ampify_command defined command'
+    description: "additional arguments to pass to ampify_command defined command"
     required: false
-    default: ''
+    default: ""
 runs:
-  using: 'docker'
-  image: 'docker://ghcr.io/ambientlight/amplify-cli-action/amplify-cli-action:0.3.0'
+  using: "docker"
+  image: "docker://ghcr.io/desklabs-creative/amplify-cli-action/amplify-cli-action:0.3.0"
   args:
     - ${{ inputs.project_dir }}
     - ${{ inputs.source_dir }}
@@ -47,5 +47,5 @@ runs:
     - ${{ inputs.amplify_cli_version }}
     - ${{ inputs.amplify_arguments }}
 branding:
-  icon: 'git-commit'
-  color: 'orange'
+  icon: "git-commit"
+  color: "blue"

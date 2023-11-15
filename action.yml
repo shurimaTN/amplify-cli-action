@@ -1,4 +1,4 @@
-name: "vipo-amplify-cli-action"
+name: "Shurima-amplify-cli-action"
 description: "This action builds and deploys your AWS Amplify project"
 inputs:
   project_dir:
